@@ -6,7 +6,7 @@ MAINTAINER Red Hat Training <training@redhat.com>
 ENV DOCROOT=/var/www/html 
 
 
-RUN   yum install -y --nodocs --disableplugin=subscription-manager 
+RUN   yum install -y --nodocs --disableplugin=subscription-manager httpd 
 RUN yum clean all --disableplugin=subscription-manager -y
 RUN echo "Hello from the httpd container!" > ${DOCROOT}/index.html
 
